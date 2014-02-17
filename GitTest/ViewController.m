@@ -13,6 +13,7 @@
 @end
 
 @implementation ViewController
+@synthesize v1;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +34,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(IBAction)btnMovePressed:(id)sender
+{
+    CGRect frame = [v1 frame];
+    CGAffineTransform transform = CGAffineTransformMakeTranslation(10, 0);
+    CGRect newFrame = CGRectApplyAffineTransform(frame, transform);
+    [v1 setFrame:newFrame];
 }
 
 @end
