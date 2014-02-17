@@ -42,6 +42,7 @@
     CGAffineTransform transform = CGAffineTransformMakeTranslation(10, 0);
     CGRect newFrame = CGRectApplyAffineTransform(frame, transform);
     [v1 setFrame:newFrame];
+    NSLog (@"Add to commit");
 }
 
 @end
