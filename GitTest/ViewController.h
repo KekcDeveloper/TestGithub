@@ -9,5 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+{
+    UIView *v1;
+}
+
+@property (nonatomic, retain)IBOutlet UIView *v1;
+
+-(IBAction)btnMovePressed:(id)sender;
 
 @end
